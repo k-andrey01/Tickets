@@ -18,7 +18,7 @@ public class Main {
                 + ticketService.getDiffPrice(filteredTickets));
         System.out.println("=====================================================================");
 
-        System.out.println("Минимальное время полета для каждого авиаперевозчика:");
+        System.out.println("Минимальное время полета для каждого авиаперевозчика между городами Владивосток и Тель-Авив:");
         for (Map.Entry<String, Long> entry : ticketService.getMinTime(filteredTickets).entrySet()) {
             System.out.println("Перевозчик: " + entry.getKey() + ", Время полета: " + entry.getValue() + " минут");
         }
