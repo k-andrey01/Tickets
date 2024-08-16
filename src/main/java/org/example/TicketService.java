@@ -53,9 +53,9 @@ public class TicketService {
         avgPrice = sortedTicketsByCities.stream().mapToDouble(Ticket::getPrice).average().getAsDouble();
         int size = sortedTicketsByCities.size();
         if (size % 2 == 0) {
-            medianPrice = (tickets.get(size/2-1).getPrice() + tickets.get(size/2).getPrice())/ 2.0;
+            medianPrice = (sortedTicketsByCities.get(size/2-1).getPrice() + sortedTicketsByCities.get(size/2).getPrice())/2.0;
         } else {
-            medianPrice = tickets.get(size/2).getPrice();
+            medianPrice = sortedTicketsByCities.get(size/2).getPrice();
         }
 
         return Math.abs(avgPrice-medianPrice);
